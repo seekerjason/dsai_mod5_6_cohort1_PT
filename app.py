@@ -1,10 +1,26 @@
 #gemini
+
 from flask import Flask, request,render_template
 import google.generativeai as genai
+import os
 
-genai.configure(api_key=gemini_key)
-model= genai.GenerativeModel("gemini-1.5-flash")
 app=Flask(__name__)
+
+# google api is from https://makersuite.google.com
+# Run locally, uncomment the following line
+#app.config.from_pyfile("config.py", silent=True) 
+#config.py contains the secret_key which is the api_key of gemini
+
+# Run in colab, the uncomment the following two lines
+#from google.colab import userdata
+#api = userdata.get('makersuite')
+
+# Run in render.com, then uncomment the following line. MAKESUITE_API_KEY need to add into Enviornment Variables
+makersuite_api_key = os.getenv('MAKERSUITE_API_KEY')
+
+
+genai.configure(api_key=app.config['SECRET_KEY'])
+model= genai.GenerativeModel("gemini-1.5-flash") #gemini-2.0-flash-001
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
