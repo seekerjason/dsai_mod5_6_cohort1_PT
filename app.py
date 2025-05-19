@@ -16,15 +16,15 @@ app=Flask(__name__)
 #from google.colab import userdata
 #api_key = userdata.get('makersuite')
 
-# Run in render.com, then uncomment the following line. MAKESUITE_API_KEY need to add into Enviornment Variables
+# Run in render.com or locally based on the environment variable, then uncomment the following line. MAKESUITE_API_KEY need to add into Enviornment Variables
 api_key = os.getenv('MAKERSUITE_API_KEY')
 
 genai.configure(api_key=api_key)
-model= genai.GenerativeModel("gemini-1.5-flash") #gemini-2.0-flash-001
+model= genai.GenerativeModel("gemini-2.0-flash-001") #gemini-1.5-flash
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    return(render_template("index.html"))
+    return(render_template("gemini.html"))
 
 @app.route("/gemini", methods=["GET", "POST"])
 def gemini():

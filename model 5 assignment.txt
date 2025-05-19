@@ -1,0 +1,17 @@
+https://partyrock.aws/home
+
+
+
+patrickfong@ivtsys.co
+patrickfong@ivtsys.com
+
+You can submit in word file
+1. Please submit your colab link for gemini python code via makersuite api.
+2. Please submit your colab link for stable diffusion to generate image.
+3. Please submit your colab link for chatbot using deepseek open source for deepseek-r1-7b model.
+50 words for each question:
+1. In what ways can GPT-based applications improve customer experience in different industries?
+2. What ethical considerations should businesses keep in mind when deploying generative AI solutions?
+3. Describe a real or hypothetical use case where integrating GPT into a business workflow led (or could lead) to measurable impact.
+
+jasonspaces12345@gmail.com M$Mmmmm123
